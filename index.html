@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body id="body">
+
+<div class="form">
+    <div class="container">
+        <div class="form-content">
+            <h1 class="form-title">Регистрация</h1>
+            <div class="form-details">
+                <div class="form-group">
+                    <input type="text" class="form-input" id="name" required>
+                    <label for="name" class="form-label">Имя</label>
+                </div>
+                <div class="validate-message">Заполните поле.</div>
+                <div class="form-group">
+                    <input type="text" class="form-input" id="phone" required>
+                    <label for="phone" class="form-label">Телефон</label>
+                </div>
+                <div class="validate-message">Заполните поле.</div>
+                <div class="form-group">
+                    <input type="text" class="form-input" id="email" required>
+                    <label for="email" class="form-label">Электронная почта</label>
+                </div>
+                <div class="validate-message">Поле должно быть заполнено корректно</div>
+                <div class="form-group">
+                    <textarea name="message" class="form-area" id="message" cols="30" rows="5" required></textarea>
+                    <label for="message" class="form-label">Сообщение</label>
+                </div>
+                <div class="validate-message">Заполните поле.</div>
+            </div>
+            <div class="form-button">
+                <button class="button" id="process" disabled>
+                    Отправить
+                </button>
+
+                <button class="button" id="popup-opened">
+                    Открыть окно
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="popup">
+    <div class="popup__closed" id="popup-closed">
+        <svg class="popup__closed-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="#FFFFFFFF"
+             width="30px" height="30px">
+            <path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"/>
+        </svg>
+    </div>
+    <div class="popup__close">
+        Пожалуйста, оставьте свои данные, чтобы мы могли связаться с вами.
+    </div>
+    <div class="popup__background-dark"></div>
+</div>
+
+</body>
+</html>

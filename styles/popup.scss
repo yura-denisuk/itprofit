@@ -1,0 +1,58 @@
+$colorText: #6933DC;
+@font-face {
+  src: url("../static/fonts/MuseoSans-500.ttf");
+  font-family: "Museo Sans Cyrl";
+}
+
+$popupWidth: 450px;
+$popupHeight: 211px;
+$fontFamilyColor: rgb(255, 255, 255);
+$fontFamilyColorHeaderBell: rgb(236, 198, 107);
+
+.popup.open {
+  opacity: 1;
+  z-index: 10;
+}
+
+.popup {
+  opacity: 0;
+  z-index: -10;
+  transition: opacity 0.7s;
+  background-color: $colorText;
+  box-sizing: border-box;
+  padding: 50px 74px 55px 77px;
+  max-width: $popupWidth;
+  position: fixed;
+  top: calc( 50% - $popupHeight/2);
+  left: calc( 50% - $popupWidth/2);
+  width: 100%;
+
+  .popup__closed {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .popup__close {
+    max-width: 409px;
+    font-size: 18px;
+    line-height: 1.278;
+    color: $fontFamilyColor;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: Museo Sans Cyrl, sans-serif;
+  }
+  &:before {
+    content: '';
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: -1;
+  }
+}

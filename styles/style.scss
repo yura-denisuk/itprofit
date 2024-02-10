@@ -1,0 +1,130 @@
+@font-face {
+  src: url("../static/fonts/MuseoSans-700.ttf");
+  font-family: "Museo Sans Cyrl Bold";
+}
+
+@font-face {
+  src: url("../static/fonts/MuseoSans-500.ttf");
+  font-family: "Museo Sans Cyrl";
+}
+
+$colorText: #6933DC;
+$colorBg: #FFFFFF;
+
+.form {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .form-content {
+      max-width: 504px;
+
+      .form-title {
+        margin-top: 10px;
+        font-family: Museo Sans Cyrl Bold, sans-serif;
+        color: $colorText;
+        text-align: center;
+      }
+
+      .form-details {
+        margin-top: 10px;
+        max-width: 485px;
+
+        .form-group {
+          background: $colorBg;
+          border: 1px solid #C1BBBB;
+          padding: 10px 23px 13px 23px;
+          width: 485px;
+          height: 65px;
+          box-sizing: border-box;
+          position: relative;
+          transition: .2s ease all;
+          &:nth-last-child(2){
+            height: 165px;
+          }
+          &:focus-within {
+            border-left: 5px solid $colorText;
+          }
+
+          .form-input, .form-area {
+            border: 0;
+            outline: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            font-family: Museo Sans Cyrl Bold, sans-serif;
+            font-size: 18px;
+            line-height: 22px;
+            color: $colorText;
+
+            &:focus,  &:valid {
+              margin-top: 27px;
+              height: auto;
+            };
+
+            &:focus ~ .form-label,
+            &:not(:focus):valid ~ .form-label,
+            {
+              top: 12px;
+            }
+          }
+
+          .form-label {
+            font-size: 18px;
+            line-height: 22px;
+            position: absolute;
+            left: 23px;
+            top: 23px;
+            transition: .2s all;
+            font-family: Museo Sans Cyrl, sans-serif;
+          }
+        }
+
+        .validate-message {
+          display: none;
+          color: red;
+          font-size: 14px;
+          font-family: Museo Sans Cyrl, sans-serif;
+          padding: 5px 0 5px 23px;
+        }
+      }
+
+      .form-button {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .button {
+          padding: 14px 35px;
+          background: $colorText;
+          border-radius: 6px;
+          font-size: 17px;
+          line-height: 20px;
+          color: $colorBg;
+          border: 0;
+          cursor: pointer;
+
+          &:hover {
+            background: #29096e;
+            transition: .4s;
+
+          };
+
+          &:disabled {
+            background-color: #e2dfe7;
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+}
+
+textarea {
+  resize:none;
+  overflow:hidden;
+}
+
+@import "popup";
